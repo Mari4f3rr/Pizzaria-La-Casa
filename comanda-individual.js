@@ -1,6 +1,6 @@
 let total = 0;
 let tipoSelecionado = null;
-let temRodizio = false; // Variável para controlar se o rodízio já foi adicionado
+let temRodizio = false;
 
 /* ========================= */
 /* SABORES E DADOS DA PIZZA */
@@ -47,21 +47,21 @@ function toggleMeioMeio() {
 /* LÓGICA DE SELEÇÃO E CÁLCULO */
 /* ========================= */
 
-// Função unificada para remover QUALQUER item da lista
+
 function removerItem(botao, valorDoItem, isRodizio = false) {
-    // Remove o 'li' inteiro que envolve o botão
+
     botao.parentElement.remove();
     
-    // Subtrai o valor do item do total geral
+
     total -= valorDoItem;
     
-    // Se o item removido for o rodízio, libera para adicionar de novo e volta o card de pizza
+    
     if (isRodizio) {
         temRodizio = false;
         document.getElementById("cardPizzas").classList.remove("hidden");
     }
 
-    // Prevenção extra para o total não ficar negativo por erro de float
+
     if (total < 0) total = 0;
 
     atualizarValores();
@@ -77,12 +77,12 @@ function selecionarTipo(tipo) {
     if (tipo === "rodizio") {
         if (temRodizio) {
             alert("O Rodízio já está no seu pedido!");
-            return; // Impede que adicione outro
+            return;
         }
 
-        cardPizzas.classList.add("hidden"); // Esconde as pizzas avulsas
+        cardPizzas.classList.add("hidden");
         temRodizio = true;
-        total += 70; // Soma ao total (não zera mais as bebidas já pedidas!)
+        total += 70;
         
         let item = document.createElement("li");
         item.innerHTML = `
@@ -93,7 +93,6 @@ function selecionarTipo(tipo) {
         
         atualizarValores();
     } else {
-        // Se clicar em avulsa, garante que o card de pizzas está visível
         cardPizzas.classList.remove("hidden");
     }
 }

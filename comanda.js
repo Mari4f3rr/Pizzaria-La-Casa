@@ -1,6 +1,6 @@
 let total = 0;
 let tipoSelecionado = null;
-let temRodizio = false; // Controle para não duplicar o rodízio
+let temRodizio = false; 
 
 /* ========================= */
 /* SABORES E DADOS DA PIZZA */
@@ -47,22 +47,22 @@ function toggleMeioMeio() {
 /* LÓGICA DE SELEÇÃO E CÁLCULO */
 /* ========================= */
 
-// Função unificada para remover QUALQUER item da lista
+
 function removerItem(botao, valorDoItem, isRodizio = false) {
-    // Remove o 'li' inteiro que envolve o botão
+    
     botao.parentElement.remove();
     
-    // Subtrai o valor do item do total geral
+
     total -= valorDoItem;
     
-    // Se o item removido for o rodízio, libera para adicionar de novo e volta o card de pizza
+
     if (isRodizio) {
         temRodizio = false;
         let cardPizzas = document.getElementById("cardPizzas");
         if(cardPizzas) cardPizzas.classList.remove("hidden");
     }
 
-    // Prevenção extra para o total não ficar negativo
+ 
     if (total < 0) total = 0;
 
     atualizarValores();

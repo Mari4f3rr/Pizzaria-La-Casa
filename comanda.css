@@ -29,35 +29,34 @@ header p {
 }
 .btn-voltar {
     position: absolute;
-    top: 15px;      /* Ajustado para ficar mais centralizado verticalmente */
+    top: 15px;  
     left: 15px;
-    background: rgba(255, 255, 255, 0.15); /* Fundo sutil e translúcido */
+    background: rgba(255, 255, 255, 0.15); 
     color: #f8f1e5;
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda fina e clara */
-    font-size: 1.1rem; /* Fonte maior */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1.1rem;
     font-weight: 500;
     cursor: pointer;
-    padding: 10px 18px; /* Mais preenchimento para ser mais clicável */
+    padding: 10px 18px; 
     width: auto;
     display: flex;
     align-items: center;
-    gap: 8px; /* Mais espaço entre o ícone e o texto */
-    border-radius: 50px; /* Formato de pílula */
+    gap: 8px;
+    border-radius: 50px; 
     transition: background 0.2s, border-color 0.2s, transform 0.1s;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .btn-voltar:hover {
-    background: rgba(255, 255, 255, 0.25); /* Fundo mais claro no hover */
+    background: rgba(255, 255, 255, 0.25); 
     border-color: rgba(255, 255, 255, 0.35);
-    transform: translateX(-3px); /* Animação sutil para a esquerda */
+    transform: translateX(-3px); 
 }
 
-/* Estilo para o novo ícone SVG do chevron */
 .icone-voltar {
     width: 1.2rem;
     height: 1.2rem;
-    stroke: currentColor; /* O ícone herda a cor do texto automaticamente */
+    stroke: currentColor;
 }
 
 .container {
@@ -66,7 +65,7 @@ header p {
     padding: 0 15px;
 }
 
-/* Estilo de Cartão (App Vibe) */
+
 .card {
     background: #ffffff;
     border-radius: 12px;
@@ -81,9 +80,9 @@ h2 {
     font-size: 1.3rem;
     margin-top: 0;
     margin-bottom: 15px;
-    border-bottom: 2px solid #d32f2f; /* NOVO: Linha vermelha nos títulos dos cards */
+    border-bottom: 2px solid #d32f2f; 
     padding-bottom: 10px;
-    display: inline-block; /* Faz a linha vermelha acompanhar o tamanho do texto */
+    display: inline-block;
 }
 
 label {
@@ -169,14 +168,14 @@ button:hover {
     display: none !important;
 }
 
-/* Grid para alinhar campos lado a lado */
+
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
 }
 
-/* Lista de Pedidos mais limpa com Flexbox para o botão */
+
 ul {
     list-style: none;
     padding: 0;
@@ -192,7 +191,7 @@ ul li {
     font-size: 0.95rem;
     color: #333;
     font-weight: 500;
-    display: flex;             /* Novo: Alinha o texto e o botão lado a lado */
+    display: flex;            
     justify-content: space-between;
     align-items: center;
 }
@@ -201,9 +200,9 @@ ul li span {
     flex: 1;
 }
 
-/* Novo: Estilo do botão de remover item */
+
 .btn-remover {
-    background: #d9534f; /* Vermelho suave */
+    background: #d9534f;
     color: white;
     border: none;
     padding: 6px 12px;
@@ -216,10 +215,10 @@ ul li span {
 
 .btn-remover:hover {
     background: #c9302c;
-    transform: none; /* Tira o efeito de pulo do botão principal */
+    transform: none; 
 }
 
-/* Rodapé Fixo (A cereja do bolo) */
+
 .resultado-sticky {
     position: fixed;
     bottom: 0;
@@ -232,7 +231,7 @@ ul li span {
     justify-content: space-evenly;
     align-items: center;
     box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
-    border-top: 4px solid #d32f2f; /* NOVO: Linha vermelha no rodapé fixo */
+    border-top: 4px solid #d32f2f; 
     z-index: 1000;
     box-sizing: border-box;
 }
