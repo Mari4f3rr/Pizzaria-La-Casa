@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0eadd; /* Mesmo fundo creme do app */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ========================= */
+/* HEADER ESTILO APP */
+/* ========================= */
+.hero-header {
+    background-color: #1f4d3a;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 2px);
+    background-size: 24px 24px;
+    color: #f8f1e5;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    position: relative;
+    border-bottom: 5px solid #d32f2f; /* NOVO: Linha vermelha no cabeçalho */
+    z-index: 10;
+}
+
+.hero-header h1 {
+    font-family: 'Poppins', sans-serif; /* Fonte nova e moderna! */
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.hero-header p {
+    font-weight: 300;
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+/* ========================= */
+/* CONTAINER E CARD */
+/* ========================= */
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Para empilhar o card e o mini-rodape */
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    max-width: 950px; /* Aumentei um pouco para caber a foto bem */
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    overflow: hidden; /* Corta a imagem para não vazar das bordas arredondadas */
+}
+
+/* Novo Layout Dividido */
+.layout-dividido {
+    display: flex;
+    text-align: left; /* Tira o texto centralizado antigo */
+}
+
+.card-imagem {
+    flex: 0 0 45%; /* A imagem ocupa 45% do espaço */
+}
+
+.card-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a foto preencha o espaço sem amassar */
+}
+
+.card-conteudo {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ========================= */
+/* LISTA DE DESTAQUES (FEATURES) */
+/* ========================= */
+.apresentacao h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #1f4d3a;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.lista-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lista-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.icone-feature {
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.lista-features strong {
+    display: block;
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.lista-features p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* ========================= */
+/* MINI RODAPÉ DA TELA INICIAL */
+/* ========================= */
+.mini-rodape {
+    margin-top: 25px;
+    text-align: center;
+    color: #1f4d3a;
+    font-size: 0.85rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+/* ========================= */
+/* BOTÕES MODERNOS */
+/* ========================= */
+.botoes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.1s;
+    font-family: 'Inter', sans-serif;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background: #d32f2f; /* NOVO: Botão vermelho chamativo */
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #b71c1c;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #1f4d3a;
+    border: 2px solid #1f4d3a;
+}
+
+.btn-outline:hover {
+    background: #1f4d3a;
+    color: #f8f1e5;
+}
+.decoracoes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Impede que os ícones bloqueiem o clique nos botões */
+    z-index: 0; /* Joga os ícones lá para trás */
+    overflow: hidden;
+}
+
+.icone {
+    position: absolute;
+    font-size: 4rem;
+    opacity: 0.12; /* Fica quase transparente, parecendo marca d'água */
+    filter: grayscale(20%); /* Tira um pouco do "berro" das cores */
+    user-select: none;
+}
+
+
+.d1 { top: 12%; left: 8%; transform: rotate(15deg); }
+.d2 { top: 18%; right: 8%; transform: rotate(-25deg) scale(1.2); }
+.d3 { bottom: 12%; left: 10%; transform: rotate(45deg); font-size: 5rem; }
+.d4 { bottom: 18%; right: 10%; transform: rotate(-15deg); }
+.d5 { top: 45%; left: 4%; transform: rotate(30deg) scale(0.8); }
+.d6 { top: 55%; right: 5%; transform: rotate(-40deg) scale(0.9); }
+.d7 { top: 8%; right: 35%; transform: rotate(15deg) scale(0.9); }
+.d8 { bottom: 25%; right: 25%; transform: rotate(-20deg) scale(1.1); }
+.d9 { top: 30%; left: 22%; transform: rotate(45deg) scale(0.8); }
+.d10 { bottom: 40%; left: 3%; transform: rotate(-60deg) scale(1.2); }
+.d11 { top: 75%; right: 15%; transform: rotate(10deg); }
+.d12 { top: 5%; left: 40%; transform: rotate(-15deg) scale(0.85); }
+.d13 { bottom: 6%; right: 40%; transform: rotate(5deg) scale(1.3); }
+.d14 { bottom: 45%; left: 30%; transform: rotate(-35deg) scale(0.95); }
+
+/* Garantir que o conteúdo principal fique na frente das decorações */
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================= */
+/* RESPONSIVO (CELULAR) */
+/* ========================= */
+@media (max-width: 768px) {
+    .hero-header h1 {
+        font-size: 2rem;
+    }
+    
+    .layout-dividido {
+        flex-direction: column; /* Empilha foto em cima, texto embaixo */
+    }
+
+    .card-imagem {
+        height: 250px; /* Altura fixa da foto no celular */
+    }
+
+    .card-conteudo {
+        padding: 25px 20px;
+    }
+
+    .botoes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mini-rodape {
+        font-size: 0.75rem;
+        padding: 0 10px;
+    }
+}

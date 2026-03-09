@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Comanda Individual - La Casa</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="comanda.css">
+</head>
+<body>
+
+<header>
+    <button class="btn-voltar" onclick="window.location.href='index.html'">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icone-voltar">
+            <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+        Voltar
+    </button>
+    <h1>La Casa</h1>
+    <p>Comanda Individual</p>
+</header>
+
+<div class="container">
+    <div class="card configuracao">
+        <label>Tipo de Consumo:</label>
+        <div class="grid-2">
+            <button class="btn-outline" onclick="selecionarTipo('avulsa')">Pizzas Avulsas</button>
+            <button class="btn-outline" onclick="selecionarTipo('rodizio')">Rodízio</button>
+        </div>
+    </div>
+
+    <section id="areaPedidos" class="hidden">
+        
+        <div class="card" id="cardPizzas">
+            <h2> Adicionar Pizza</h2>
+            
+            <label>Categoria</label>
+            <select id="categoriaPizza" onchange="carregarSabores()">
+                <option value="salgada">Salgadas</option>
+                <option value="doce">Doces</option>
+            </select>
+
+            <label>Sabor Principal</label>
+            <select id="sabor1"></select>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="meioMeio" onchange="toggleMeioMeio()">
+                <label for="meioMeio" style="margin:0;">Meio a Meio?</label>
+            </div>
+
+            <select id="sabor2" class="hidden"></select>
+
+            <div class="grid-2">
+                <div>
+                    <label>Tamanho</label>
+                    <select id="tamanho">
+                        <option value="40">Pequena - R$40</option>
+                        <option value="60">Média - R$60</option>
+                        <option value="80">Grande - R$80</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Quantidade</label>
+                    <input type="number" id="quantidadePizza" min="1" value="1">
+                </div>
+            </div>
+
+            <label>Observações</label>
+            <input type="text" id="comentario" placeholder="Ex: sem cebola, borda recheada...">
+
+            <button onclick="adicionarPizza()">+ Adicionar Pizza</button>
+        </div>
+
+        <div class="card">
+            <h2> Adicionar Bebida</h2>
+
+            <label>Tipo</label>
+            <select id="tipoBebida" onchange="carregarBebidas()">
+                <option value="">Selecione...</option>
+                <option value="refrigerante">Refrigerante</option>
+                <option value="agua">Água</option>
+                <option value="suco">Suco</option>
+            </select>
+
+            <select id="marcaBebida" onchange="carregarTamanhos()" class="hidden"></select>
+            <select id="tamanhoBebida" class="hidden"></select>
+
+            <div class="grid-2">
+                <div>
+                    <label>Copos Total</label>
+                    <input type="number" id="coposTotal" min="0" placeholder="0">
+                </div>
+                <div>
+                    <label>Copos c/ Gelo</label>
+                    <input type="number" id="coposGelo" min="0" placeholder="0">
+                </div>
+            </div>
+
+            <button onclick="adicionarBebida()">+ Adicionar Bebida</button>
+        </div>
+
+        <div class="card">
+            <h2> Resumo do Pedido</h2>
+            <ul id="listaPedidos"></ul>
+        </div>
+
+    </section>
+</div>
+
+<div class="resultado-sticky hidden" id="rodapeResultado" style="justify-content: center;">
+    <div style="text-align: center;">
+        <p>Total a Pagar</p>
+        <h3>R$ <span id="total">0.00</span></h3>
+    </div>
+</div>
+
+<div class="decoracoes">
+    <span class="icone d1">🍕</span>
+    <span class="icone d2">🌿</span>
+    <span class="icone d3">🍅</span>
+    <span class="icone d4">🧀</span>
+    <span class="icone d5">🍷</span>
+    <span class="icone d6">🍕</span>
+    <span class="icone d7">🍄</span>
+    <span class="icone d8">🌶️</span>
+    <span class="icone d9">🧅</span>
+    <span class="icone d10">🌿</span>
+    <span class="icone d11">🥓</span>
+    <span class="icone d12">🍅</span>
+    <span class="icone d13">🛵</span>
+    <span class="icone d14">🍕</span>
+</div>
+
+<script src="comanda-individual.js"></script>
+</body>
+</html>
