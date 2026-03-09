@@ -238,7 +238,7 @@ button:active {
 /* ========================= */
 @media (max-width: 768px) {
     .hero-header h1 {
-        font-size: 1rem;
+        font-size: 2rem;
     }
     
     .layout-dividido {

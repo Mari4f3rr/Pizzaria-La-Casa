@@ -1,9 +1,9 @@
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f0eadd; /* Creme mais suave para contraste */
+    background-color: #f0eadd;
     color: #333;
     margin: 0;
-    padding-bottom: 90px; /* Espaço para não esconder nada sob o rodapé fixo */
+    padding-bottom: 90px;
 }
 
 header {
@@ -130,7 +130,7 @@ input:focus, select:focus {
     transform: scale(1.2);
 }
 
-/* Botões Modernos */
+
 button {
     width: 100%;
     padding: 15px;
@@ -297,4 +297,10 @@ ul li span {
 .container {
     position: relative;
     z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .hero-header h1 {
+        font-size: 1rem;
+    }
 }
