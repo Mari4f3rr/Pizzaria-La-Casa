@@ -17,34 +17,52 @@ body {
 /* HEADER ESTILO APP */
 /* ========================= */
 .hero-header {
-    background-color: #1f4d3a;
-    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 2px);
-    background-size: 24px 24px;
-    color: #f8f1e5;
+    background:
+    linear-gradient(45deg, #000 25%, transparent 25%),
+    linear-gradient(-45deg, #000 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #000 75%),
+    linear-gradient(-45deg, transparent 75%, #000 75%);
+    background-size: 40px 40px;
+    background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 40px 20px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    position: relative;
-    border-bottom: 5px solid #d32f2f;
-    z-index: 10;
+    
+}
+    
+
+
+.hero-header img {
+    width: 350px;
+    height: auto;
+
 }
 
-.hero-header h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
 
 .hero-header p {
     font-weight: 300;
     opacity: 0.9;
     font-size: 1.1rem;
+    margin-top: 15px; 
+    text-align: center;
 }
 
 /* ========================= */
 /* CONTAINER E CARD */
 /* ========================= */
+
+.banner{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 300px;
+}
 .container {
     flex: 1;
     display: flex;
@@ -95,11 +113,11 @@ body {
 .apresentacao h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    color: #1f4d3a;
+    color: #000000;
     font-size: 1.8rem;
     margin-bottom: 25px;
     line-height: 1.2;
-}
+}   
 
 .lista-features {
     list-style: none;
@@ -141,7 +159,7 @@ body {
 .mini-rodape {
     margin-top: 25px;
     text-align: center;
-    color: #1f4d3a;
+    color: #000000;
     font-size: 0.85rem;
     font-weight: 500;
     opacity: 0.8;
@@ -184,12 +202,12 @@ button:active {
 
 .btn-outline {
     background: transparent;
-    color: #1f4d3a;
-    border: 2px solid #1f4d3a;
+    color: #ce0909;
+    border: 2px solid #ba0707;
 }
 
 .btn-outline:hover {
-    background: #1f4d3a;
+    background: #cd2009;
     color: #f8f1e5;
 }
 .decoracoes {
@@ -199,34 +217,42 @@ button:active {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 0;
+    z-index: 1;
     overflow: hidden;
 }
 
 .icone {
     position: absolute;
-    font-size: 4rem;
-    opacity: 0.12;
-    filter: grayscale(20%);
+    opacity: 0.20;
     user-select: none;
+    font-size: 4rem;
+}
+
+.icone img {
+    width: 150px;
+    height: auto;
+    display: block;
 }
 
 
-.d1 { top: 12%; left: 8%; transform: rotate(15deg); }
-.d2 { top: 18%; right: 8%; transform: rotate(-25deg) scale(1.2); }
-.d3 { bottom: 12%; left: 10%; transform: rotate(45deg); font-size: 5rem; }
-.d4 { bottom: 18%; right: 10%; transform: rotate(-15deg); }
-.d5 { top: 45%; left: 4%; transform: rotate(30deg) scale(0.8); }
-.d6 { top: 55%; right: 5%; transform: rotate(-40deg) scale(0.9); }
-.d7 { top: 8%; right: 35%; transform: rotate(15deg) scale(0.9); }
-.d8 { bottom: 25%; right: 25%; transform: rotate(-20deg) scale(1.1); }
-.d9 { top: 30%; left: 22%; transform: rotate(45deg) scale(0.8); }
-.d10 { bottom: 40%; left: 3%; transform: rotate(-60deg) scale(1.2); }
-.d11 { top: 75%; right: 15%; transform: rotate(10deg); }
-.d12 { top: 5%; left: 40%; transform: rotate(-15deg) scale(0.85); }
-.d13 { bottom: 6%; right: 40%; transform: rotate(5deg) scale(1.3); }
-.d14 { bottom: 45%; left: 30%; transform: rotate(-35deg) scale(0.95); }
-
+.d1  { top: 20%; left: 3%; transform: rotate(15deg); }
+.d2  { top: 15%; right: 4%; transform: rotate(-20deg); } 
+.d3  { bottom: 10%; left: 5%; transform: rotate(25deg); }
+.d4  { bottom: 12%; right: 5%; transform: rotate(-15deg); }
+.d5  { top: 45%; left: -2%; transform: rotate(10deg); }
+.d6  { top: 35%; right: -1%; transform: rotate(-10deg); }
+.d7  { top: 2%; left: 30%; transform: rotate(45deg); }
+.d8  { top: 5%; right: 30%; transform: rotate(-30deg); }
+.d9  { bottom: 5%; left: 30%; transform: rotate(-25deg); }
+.d10 { bottom: 8%; right: 25%; transform: rotate(15deg); }
+.d11 { top: 25%; left: 12%; transform: rotate(-5deg); }
+.d12 { top: 20%; right: 15%; transform: rotate(20deg); }
+.d13 { bottom: 35%; left: 8%; transform: rotate(-15deg); }
+.d14 { bottom: 28%; right: 12%; transform: rotate(35deg); }
+.d15 { top: 65%; left: 5%; transform: rotate(-40deg); }
+.d16 { top: 60%; right: 3%; transform: rotate(12deg); }
+.d17 { bottom: 45%; left: 20%; transform: rotate(50deg); }
+.d18 { bottom: 40%; right: 18%; transform: rotate(-35deg); }
 
 .container {
     position: relative;
@@ -262,3 +288,5 @@ button:active {
         padding: 0 10px;
     }
 }
+
+
