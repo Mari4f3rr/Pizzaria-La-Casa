@@ -311,4 +311,8 @@ ul li span {
         font-size: 1.4rem;
         line-height: 1.2;
     }
+    .icone{
+        z-index: 1;
+        
+    }
 }
