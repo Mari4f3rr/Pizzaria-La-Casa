@@ -313,6 +313,7 @@ ul li span {
     }
     .icone{
         z-index: 1;
-        
+        opacity: 1;
     }
+    
 }
